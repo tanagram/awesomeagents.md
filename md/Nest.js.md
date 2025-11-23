@@ -1,0 +1,21 @@
+# Nest.js Best Practices
+
+- Use dependency injection with constructor injection for better testability and modularity.
+- Organize code into modules using `@Module` decorator to group related components.
+- Use decorators (`@Controller`, `@Injectable`, `@Get`, `@Post`) for clear and declarative routing.
+- Implement DTOs (Data Transfer Objects) for request validation and type safety.
+- Use `class-validator` and `class-transformer` for automatic validation and transformation.
+- Implement guards with `@UseGuards` for authentication and authorization logic.
+- Use interceptors with `@UseInterceptors` for cross-cutting concerns like logging and transformation.
+- Implement pipes with `@UsePipes` for data transformation and validation at route level.
+- Use middleware for request/response modification and logging at the application level.
+- Configure environment variables using `@nestjs/config` module with type-safe configuration.
+- Use TypeORM or Prisma for database operations with proper repository patterns.
+- Implement exception filters with `@Catch` for centralized error handling.
+- Use Swagger/OpenAPI with `@nestjs/swagger` for automatic API documentation.
+- Implement proper validation pipes at global level using `ValidationPipe`.
+- Use `async`/`await` consistently for asynchronous operations.
+- Implement pagination, filtering, and sorting for list endpoints.
+- Structure folders by feature modules rather than by type (controllers, services).
+- Use dependency injection scopes (`DEFAULT`, `REQUEST`, `TRANSIENT`) appropriately.
+- Implement proper logging using built-in `Logger` or external logging libraries.

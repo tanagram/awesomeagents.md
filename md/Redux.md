@@ -1,0 +1,22 @@
+# Redux Best Practices
+
+- Use Redux Toolkit (RTK) for writing Redux logic.
+- Define state shape with clear, normalized structure to avoid nested updates.
+- Use `createSlice` from Redux Toolkit to generate action creators and reducers together.
+- Keep reducers pure and never mutate state; use Immer (included in RTK) for immutable updates.
+- Use `createAsyncThunk` for handling asynchronous logic instead of writing thunks manually.
+- Use `createSelector` from Reselect library for memoized derived state calculations.
+- Organize Redux logic by feature using the "ducks" pattern or RTK slice files.
+- Use `configureStore` from Redux Toolkit for store setup with good defaults.
+- Keep minimal state in Redux; derive data in selectors rather than storing computed values.
+- Use RTK Query for data fetching and caching instead of managing request state manually.
+- Dispatch actions with descriptive names following the pattern "domain/eventName".
+- Use middleware like `redux-thunk` (included in RTK) for side effects and async logic.
+- Avoid deeply nested state structures; normalize related data with IDs and lookup tables.
+- Use TypeScript with Redux Toolkit for type-safe actions, reducers, and selectors.
+- Use Redux DevTools Extension for debugging state changes and time-travel debugging.
+- Connect components to Redux using React-Redux hooks (`useSelector`, `useDispatch`) instead of `connect()`.
+- Keep action creators and reducers close to the features they serve.
+- Use `extraReducers` in `createSlice` to handle actions from other slices.
+- Avoid storing non-serializable values in Redux state (functions, Promises, class instances).
+- Split complex logic into multiple smaller actions rather than one large action.

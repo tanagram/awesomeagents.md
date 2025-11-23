@@ -1,0 +1,22 @@
+# Hibernate Best Practices
+
+- Use JPA annotations (`@Entity`, `@Table`, `@Column`) for mapping entities to database tables.
+- Define relationships using `@OneToOne`, `@OneToMany`, `@ManyToOne`, `@ManyToMany` with appropriate fetch strategies.
+- Use `FetchType.LAZY` by default for associations to avoid loading unnecessary data.
+- Use `JOIN FETCH` in JPQL queries or `@EntityGraph` to eagerly load associations.
+- Implement `hashCode()` and `equals()` methods on entities based on business keys, not database IDs.
+- Use `@Version` annotation for optimistic locking to handle concurrent updates.
+- Configure second-level cache with appropriate cache strategies (`READ_ONLY`, `NONSTRICT_READ_WRITE`, `READ_WRITE`).
+- Use named queries or criteria API for type-safe query construction.
+- Use batch processing with `hibernate.jdbc.batch_size` for bulk operations.
+- Clear the session periodically during batch operations to avoid memory issues.
+- Use `@GeneratedValue` with appropriate strategy (`IDENTITY`, `SEQUENCE`, `TABLE`) for primary key generation.
+- Define database constraints (`@UniqueConstraint`, `@Index`) in entity mappings.
+- Use DTO projections for read-only queries instead of loading full entities.
+- Configure connection pooling with HikariCP or another production-grade pool.
+- Use `@Transactional` at service layer, not on entity classes or repositories.
+- Avoid the N+1 select problem by using `JOIN FETCH` or batch fetching.
+- Use `@Formula` for computed properties that map to SQL expressions.
+- Implement proper cascade types on relationships based on business requirements.
+- Use Hibernate Validator (`@NotNull`, `@Size`, `@Email`) for bean validation.
+- Monitor and analyze SQL queries with `hibernate.show_sql` and `hibernate.format_sql` during development.

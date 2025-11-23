@@ -1,0 +1,22 @@
+# Angular Best Practices
+
+- Define data structures with interfaces for type safety.
+- Avoid `any` type, utilize the type system fully.
+- Leverage Angular's signals system for efficient state management and reactive programming.
+- Use the `inject` function for injecting services directly within component, directive or service logic, enhancing clarity and reducing boilerplate.
+- Use file naming conventions: `*.component.ts` for Components, `*.service.ts` for Services, `*.module.ts` for Modules, `*.directive.ts` for Directives, `*.pipe.ts` for Pipes, `*.spec.ts` for Tests.
+- Use kebab-case for directory names (e.g., `components/auth-form`) and PascalCase for component files.
+- Use single quotes for string literals.
+- Use template strings for string interpolation.
+- Use `const` for immutable variables.
+- Use async pipe for observables in templates.
+- Implement lazy loading for feature modules.
+- Ensure accessibility with semantic HTML and ARIA labels.
+- Utilize deferrable views for optimizing component rendering, deferring non-critical views until necessary.
+- Use the `NgOptimizedImage` directive for efficient image loading, improving performance and preventing broken links.
+- Use proper error handling in services and components.
+- Implement Angular form validation or custom validators.
+- Avoid direct DOM manipulation; use Angular's templating system.
+- Prevent XSS with Angular's sanitization; avoid using innerHTML.
+- Sanitize dynamic content with built-in tools.
+- Use Angular's DI system for service injection.

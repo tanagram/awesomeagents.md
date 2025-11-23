@@ -1,0 +1,22 @@
+# JUnit Best Practices
+
+- Use JUnit 5 (JUnit Jupiter) for new projects instead of JUnit 4.
+- Use `@Test` annotation to mark test methods and ensure they are public or package-private.
+- Use descriptive test method names that clearly indicate what is being tested.
+- Follow the Arrange-Act-Assert (AAA) pattern for structuring test methods.
+- Use `@BeforeEach` for setup code that runs before each test method.
+- Use `@AfterEach` for cleanup code that runs after each test method.
+- Use `@BeforeAll` and `@AfterAll` for expensive setup/teardown that can be shared across all tests.
+- Use `@DisplayName` to provide readable test descriptions in test reports.
+- Use `@ParameterizedTest` with value sources to run the same test with multiple inputs.
+- Use `@Nested` to group related tests and create hierarchical test structures.
+- Use assertions from `org.junit.jupiter.api.Assertions` (`assertEquals`, `assertTrue`, `assertThrows`, etc.).
+- Use `assertAll` to group multiple assertions and report all failures together.
+- Use `assertTimeout` and `assertTimeoutPreemptively` to test time-sensitive operations.
+- Use `@Tag` to categorize tests and run specific groups (e.g., `@Tag("slow")`, `@Tag("integration")`).
+- Use `@Disabled` to temporarily skip tests with a clear reason provided.
+- Use assumptions (`assumeTrue`, `assumeFalse`) to conditionally run tests based on environment.
+- Use `@ExtendWith` to integrate with extensions like Mockito, Spring Test, etc.
+- Keep tests independent and avoid test interdependencies that require specific execution order.
+- Mock external dependencies using Mockito or other mocking frameworks.
+- Write tests that are fast, reliable, and provide clear failure messages.

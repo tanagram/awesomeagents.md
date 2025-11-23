@@ -1,0 +1,21 @@
+# Pytest Best Practices
+
+- Use descriptive test function names that clearly indicate what is being tested.
+- Organize tests in test files that mirror the structure of the source code.
+- Use fixtures to set up test dependencies and share setup code across tests.
+- Use `@pytest.fixture` with appropriate scope (`function`, `class`, `module`, `session`) for optimal performance.
+- Use `parametrize` decorator to run the same test with multiple input values.
+- Use markers (`@pytest.mark`) to categorize and selectively run groups of tests.
+- Use `pytest.raises` context manager to test for expected exceptions.
+- Use `assert` statements for test assertions; pytest provides detailed assertion introspection.
+- Use `conftest.py` files to share fixtures across multiple test files.
+- Use pytest plugins like `pytest-cov` for coverage reporting and `pytest-xdist` for parallel execution.
+- Use `monkeypatch` fixture to safely modify or mock objects during tests.
+- Use `tmp_path` fixture for creating temporary directories in tests.
+- Use `caplog` and `capsys` fixtures to capture and assert on log output and stdout/stderr.
+- Structure tests using the Arrange-Act-Assert pattern for clarity.
+- Use `pytest.skip` or `pytest.xfail` to mark tests that should be skipped or are expected to fail.
+- Avoid test interdependencies; each test should be independent and runnable in isolation.
+- Use `autouse=True` sparingly on fixtures to avoid unexpected side effects.
+- Keep test files separate from application code, typically in a `tests/` directory.
+- Use `pytest.ini` or `pyproject.toml` for pytest configuration and project-wide settings.

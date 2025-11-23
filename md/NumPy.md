@@ -1,0 +1,22 @@
+# NumPy Best Practices
+
+- Use vectorized operations instead of Python loops for better performance.
+- Use broadcasting to perform operations on arrays of different shapes efficiently.
+- Avoid creating unnecessary copies of arrays; use views when possible.
+- Use appropriate data types (dtype) to minimize memory usage and improve performance.
+- Use np.newaxis or np.expand_dims to add dimensions to arrays instead of reshape when appropriate.
+- Use boolean indexing and fancy indexing for selecting array elements.
+- Use np.where, np.select, or np.piecewise for conditional operations instead of loops.
+- Use axis parameter in reduction functions (sum, mean, max, etc.) to operate along specific dimensions.
+- Use np.concatenate, np.stack, or np.vstack/hstack for combining arrays efficiently.
+- Avoid using np.append in loops; preallocate arrays or use lists then convert to arrays.
+- Use np.random.default_rng() for random number generation instead of legacy np.random functions.
+- Use einsum for complex array operations and matrix multiplications when appropriate.
+- Use np.allclose for comparing floating-point arrays instead of == operator.
+- Use np.nan for missing values and np.isnan, np.nanmean, etc. for handling them.
+- Use np.save/np.load or np.savez for efficient array serialization.
+- Avoid using np.matrix; use 2D np.ndarray instead for matrix operations.
+- Use memory-mapped arrays with np.memmap for working with large datasets that don't fit in memory.
+- Use structured arrays or record arrays for heterogeneous data instead of object arrays.
+- Profile your code to identify bottlenecks before optimizing.
+- Keep arrays contiguous in memory (C-order or F-order) for optimal performance.

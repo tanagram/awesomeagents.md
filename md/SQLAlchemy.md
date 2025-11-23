@@ -1,0 +1,22 @@
+# SQLAlchemy Best Practices
+
+- Use declarative base for defining ORM models with clear table mappings.
+- Define relationships using relationship() with appropriate back_populates or backref.
+- Use lazy loading strategies ('select', 'joined', 'subquery', 'selectin') appropriately based on query patterns.
+- Use joinedload() or selectinload() to avoid N+1 query problems.
+- Use session.commit() only when all related operations are complete to ensure transactional integrity.
+- Use context managers or try-finally blocks to ensure sessions are properly closed.
+- Define indexes on frequently queried columns to improve query performance.
+- Use connection pooling with appropriate pool_size and max_overflow settings.
+- Use query.filter() with SQLAlchemy expressions instead of raw SQL strings for type safety.
+- Use session.bulk_insert_mappings() or session.bulk_update_mappings() for bulk operations.
+- Define foreign key constraints in the database schema, not just in the ORM.
+- Use Alembic for database migrations to track schema changes over time.
+- Use database-specific types when needed (e.g., postgresql.UUID, postgresql.JSONB).
+- Avoid using session.expunge() or session.merge() unless necessary for detached objects.
+- Use SQLAlchemy events for hooks into the ORM lifecycle when appropriate.
+- Define __repr__ methods on models for easier debugging.
+- Use hybrid properties for computed attributes that can be used in queries.
+- Implement proper cascade settings on relationships to handle deletions correctly.
+- Use scoped_session for thread-safe session management in multi-threaded applications.
+- Profile queries using SQLAlchemy's echo=True or logging to identify slow queries.

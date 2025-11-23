@@ -1,0 +1,22 @@
+# Flask Best Practices
+
+- Use Blueprints to organize routes by feature or resource.
+- Use Flask-SQLAlchemy for database models and ORM.
+- Use application factories for flexible application initialization.
+- Use Flask extensions for common functionality (Flask-Login, Flask-WTF, etc.).
+- Store configuration in environment variables and use Config objects.
+- Use proper error handling with custom error pages.
+- Implement CSRF protection for forms using Flask-WTF.
+- Use Flask-Migrate for database migrations with Alembic.
+- Implement proper session management and use secure session cookies.
+- Use url_for() for generating URLs instead of hardcoding paths.
+- Implement proper logging using Flask's app.logger or Python's logging module.
+- Use Flask-CORS for handling Cross-Origin Resource Sharing when building APIs.
+- Implement rate limiting for API endpoints using Flask-Limiter.
+- Use request validation and sanitization for all user inputs.
+- Implement proper authentication and authorization mechanisms.
+- Use g object for storing request-specific data.
+- Implement database connection pooling for production environments.
+- Use before_request and after_request decorators for request lifecycle management.
+- Implement proper testing using pytest and Flask's test client.
+- Use context managers for database sessions and file operations.

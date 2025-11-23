@@ -1,0 +1,25 @@
+# PyTorch Best Practices
+
+- Implement custom nn.Module classes for model architectures.
+- Utilize PyTorch's autograd for automatic differentiation.
+- Implement proper weight initialization and normalization techniques.
+- Use the Transformers library for working with pre-trained models and tokenizers.
+- Implement proper tokenization and sequence handling for text data.
+- Use the Diffusers library for implementing and working with diffusion models.
+- Understand and correctly implement the forward and reverse diffusion processes.
+- Implement efficient data loading using PyTorch's DataLoader.
+- Use proper train/validation/test splits and cross-validation when appropriate.
+- Implement early stopping and learning rate scheduling.
+- Use appropriate evaluation metrics for the specific task.
+- Implement gradient clipping and proper handling of NaN/Inf values.
+- Use try-except blocks for error-prone operations, especially in data loading and model inference.
+- Implement proper logging for training progress and errors.
+- Use PyTorch's built-in debugging tools like autograd.detect_anomaly() when necessary.
+- Utilize DataParallel or DistributedDataParallel for multi-GPU training.
+- Implement gradient accumulation for large batch sizes.
+- Use mixed precision training with torch.cuda.amp when appropriate.
+- Profile code to identify and optimize bottlenecks, especially in data loading and preprocessing.
+- Begin projects with clear problem definition and dataset analysis.
+- Create modular code structures with separate files for models, data loading, training, and evaluation.
+- Use configuration files (e.g., YAML) for hyperparameters and model settings.
+- Implement proper experiment tracking and model checkpointing.
