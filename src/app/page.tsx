@@ -10,8 +10,8 @@ export default async function Home() {
   const contentEntries = await getContentEntries();
 
   return (
-    <div className="grid min-h-screen justify-items-center">
-      <div className="flex w-full flex-col gap-6 md:flex-row md:gap-0 md:overflow-x-auto">
+    <div className="p8 grid min-h-screen justify-items-center">
+      <div className="flex h-screen w-full flex-col gap-6 p-8 pl-0 md:flex-row md:gap-0 md:overflow-x-auto">
         <TitleCard />
         <TableOfContents data={tocData} />
         {contentEntries.map((entry, index) => (

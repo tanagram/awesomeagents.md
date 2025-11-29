@@ -49,9 +49,9 @@ export function ContentCard({
   };
 
   return (
-    <div className="flex h-full flex-col justify-between border-t-4 border-solid border-t-black p-6 md:w-[400px] md:shrink-0 dark:border-t-white">
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-col gap-2">
+    <div className="flex h-full flex-col gap-4 border-t-4 border-solid border-t-black p-6 md:w-[400px] md:shrink-0 dark:border-t-white">
+      <div className="flex min-h-0 flex-1 flex-col gap-4">
+        <div className="flex shrink-0 flex-col gap-2">
           <div className="flex items-center gap-2">
             <span className="text-xl">{icon ?? <PackageIcon />}</span>
             <h2 className="text-xl font-semibold">{title}</h2>
@@ -61,8 +61,8 @@ export function ContentCard({
           )}
         </div>
 
-        <div className="rounded border border-gray-700">
-          <div className="flex items-center justify-between border-b border-gray-700 px-3 py-2">
+        <div className="flex min-h-0 flex-1 flex-col rounded border border-gray-700">
+          <div className="flex shrink-0 items-center justify-between border-b border-gray-700 px-3 py-2">
             <span className="text-sm text-gray-400">Content</span>
             <button
               onClick={handleCopy}
@@ -87,14 +87,16 @@ export function ContentCard({
           </div>
           <div
             id={`content-card-${pageNumber}`}
-            className="prose prose-invert max-w-none p-4 text-sm"
+            className="prose prose-invert max-w-none flex-1 overflow-y-auto p-4 text-sm"
           >
             {content}
           </div>
         </div>
       </div>
 
-      <div className="text-right text-sm text-gray-500">{pageNumber}</div>
+      <div className="shrink-0 text-right text-sm text-gray-500">
+        {pageNumber}
+      </div>
     </div>
   );
 }
