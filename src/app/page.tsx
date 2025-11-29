@@ -11,9 +11,9 @@ export default async function Home() {
 
   return (
     <div className="grid min-h-screen justify-items-center">
-      <TitleCard />
-      <TableOfContents data={tocData} />
       <div className="flex w-full flex-col gap-6 md:flex-row md:gap-0 md:overflow-x-auto">
+        <TitleCard />
+        <TableOfContents data={tocData} />
         {contentEntries.map((entry, index) => (
           <ContentCard
             key={`${entry.category}-${entry.name}`}
