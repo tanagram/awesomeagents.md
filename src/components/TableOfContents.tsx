@@ -35,7 +35,10 @@ function CollapsibleSection({
   defaultOpen = false,
 }: CollapsibleSectionProps) {
   return (
-    <details open={defaultOpen} className="group border-b border-gray-700 last:border-b-0">
+    <details
+      open={defaultOpen}
+      className="group border-b border-gray-700 last:border-b-0"
+    >
       <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-medium transition-colors hover:bg-gray-800">
         <ChevronIcon />
         <span>{title}</span>

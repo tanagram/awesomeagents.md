@@ -4,7 +4,8 @@ export function TitleCard() {
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold">awesome AGENTS.md</h1>
         <p className="text-gray-400">
-          Recommended patterns, rules, and techniques across xx libraries and languages to get the best results from coding agents.
+          Recommended patterns, rules, and techniques across xx libraries and
+          languages to get the best results from coding agents.
         </p>
 
         <p className="text-gray-400">

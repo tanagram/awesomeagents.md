@@ -51,7 +51,9 @@ describe("TableOfContents", () => {
 
   it("renders empty sections gracefully", () => {
     render(
-      <TableOfContents data={{ languages: [], frameworks: [], libraries: [] }} />
+      <TableOfContents
+        data={{ languages: [], frameworks: [], libraries: [] }}
+      />
     );
 
     expect(screen.getAllByText("(0)")).toHaveLength(3);

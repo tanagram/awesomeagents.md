@@ -11,7 +11,11 @@ export interface ContentEntry {
 
 export async function getContentEntries(): Promise<ContentEntry[]> {
   const contentDir = path.join(process.cwd(), "content");
-  const categories: ContentCategory[] = ["languages", "frameworks", "libraries"];
+  const categories: ContentCategory[] = [
+    "languages",
+    "frameworks",
+    "libraries",
+  ];
   const entries: ContentEntry[] = [];
 
   for (const category of categories) {
