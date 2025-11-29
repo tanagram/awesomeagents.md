@@ -1,28 +1,28 @@
+import Markdown from "react-markdown";
 import { ContentCard } from "@/components/ContentCard";
 import { TitleCard } from "@/components/TitleCard";
 import { TableOfContents } from "@/components/TableOfContents";
 import { getTableOfContentsData } from "@/lib/getTableOfContentsData";
+import { getContentEntries } from "@/lib/getContentEntries";
 
 export default async function Home() {
   const tocData = await getTableOfContentsData();
+  const contentEntries = await getContentEntries();
 
   return (
     <div className="grid min-h-screen justify-items-center">
       <TitleCard />
       <TableOfContents data={tocData} />
-      <ContentCard
-        title="Elixir"
-        description="Elixir is a functional, concurrent programming language built on the Erlang VM, designed for highly scalable and fault-tolerant systems. It offers a modern, expressive syntax, making it well-suited for web services, real-time applications, and distributed architectures."
-        content={
-          <div>
-            <h1>Basics</h1>{" "}
-            <ol>
-              <li>Hello world</li>
-            </ol>
-          </div>
-        }
-        pageNumber={1}
-      />
+      <div className="flex w-full flex-col gap-6 md:flex-row md:gap-0 md:overflow-x-auto">
+        {contentEntries.map((entry, index) => (
+          <ContentCard
+            key={`${entry.category}-${entry.name}`}
+            title={entry.name}
+            content={<Markdown>{entry.content}</Markdown>}
+            pageNumber={index + 1}
+          />
+        ))}
+      </div>
     </div>
   );
 }
