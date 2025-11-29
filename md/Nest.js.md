@@ -19,3 +19,4 @@
 - Structure folders by feature modules rather than by type (controllers, services).
 - Use dependency injection scopes (`DEFAULT`, `REQUEST`, `TRANSIENT`) appropriately.
 - Implement proper logging using built-in `Logger` or external logging libraries.
+-
