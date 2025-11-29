@@ -21,3 +21,8 @@
 - Named exports for components (e.g., `export function ComponentName`)
 - Tests: Vitest + React Testing Library; use `describe`/`it`/`expect`
 - ESLint with Next.js core-web-vitals and TypeScript rules
+- Never render SVGs directly in JSX; extract it into a separate named component
+- Never use inline `style`; always use Tailwind classes.
+
+## Tailwind CSS
+- Leverage gap utilities (`gap-4`) for consistent spacing in flex and grid containers.
