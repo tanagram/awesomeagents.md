@@ -2,8 +2,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: oklch(0.3878 0.0564 80.65);
   --content-card-shadow-color: 170deg 22% 38%;
+}
+
+@theme {
+  --color-white: oklch(0.9733 0.0122 80.65);
+  --color-secondary-white: oklch(0.7771 0.01 80.65);
 }
 
 @theme inline {
@@ -27,7 +32,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: oklch(0.9504 0.0073 80.65);
   }
 }
 
