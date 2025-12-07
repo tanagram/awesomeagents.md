@@ -1,3 +1,7 @@
+import { Neuton } from "next/font/google";
+
+const neuton = Neuton({ weight: ["400", "700"] });
+
 export interface TableOfContentsData {
   languages: string[];
   frameworks: string[];
@@ -39,14 +43,17 @@ function CollapsibleSection({
       open={defaultOpen}
       className="group border-b border-gray-700 last:border-b-0"
     >
-      <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-medium transition-colors hover:bg-gray-800">
+      <summary className="text-shadow-foundation flex cursor-pointer list-none items-center gap-2 px-4 py-3 font-medium text-white transition-colors hover:bg-gray-800">
         <ChevronIcon />
-        <span>{title}</span>
+        <span className={`font-bold ${neuton.className}`}>{title}</span>
         <span className="ml-auto text-sm text-gray-500">({items.length})</span>
       </summary>
       <ul className="flex flex-col gap-1 px-4 pb-3 pl-10">
         {items.map((item) => (
-          <li key={item} className="text-sm text-gray-400 hover:text-white">
+          <li
+            key={item}
+            className="text-secondary-white text-shadow-foundation text-sm hover:text-white"
+          >
             {item}
           </li>
         ))}
@@ -61,7 +68,7 @@ interface TableOfContentsProps {
 
 export function TableOfContents({ data }: TableOfContentsProps) {
   return (
-    <div className="rounded border border-gray-700">
+    <div className="overflow-y-scroll rounded-l-md border border-gray-700 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.5)_80%)] backdrop-blur-sm">
       <CollapsibleSection
         title="Languages"
         items={data.languages}

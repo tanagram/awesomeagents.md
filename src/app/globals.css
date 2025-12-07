@@ -15,6 +15,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --text-shadow-foundation: 
+    0 0 2px oklch(0.1 0.04 80.65),
+    0 0 10px oklch(0.3 0.1 80.65);
   --shadow-elevation-medium: 0.4px 0.6px 1px hsl(var(--content-card-shadow-color) / 0.1),
     1.6px 2.3px 3.8px -0.3px hsl(var(--content-card-shadow-color) / 0.17),
     3.4px 4.9px 8.1px -0.7px hsl(var(--content-card-shadow-color) / 0.25),
@@ -40,4 +43,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+.text-shadow-foundation {
+  text-shadow: var(--text-shadow-foundation);
 }

@@ -2,6 +2,10 @@
 
 import { useState, type ReactNode } from "react";
 
+import { Neuton } from "next/font/google";
+
+const neuton = Neuton({ weight: ["700"] });
+
 function PackageIcon() {
   return (
     <svg
@@ -56,7 +60,9 @@ export function ContentCard({
           <div className="flex shrink-0 flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className="text-xl">{icon ?? <PackageIcon />}</span>
-              <h2 className="text-xl font-semibold">{title}</h2>
+              <h2 className={`text-xl font-semibold ${neuton.className}`}>
+                {title}
+              </h2>
             </div>
             {description && (
               <p className="text-sm text-gray-400">{description}</p>
